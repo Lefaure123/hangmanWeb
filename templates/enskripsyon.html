@@ -1,0 +1,25 @@
+{% extends 'akey.html' %}
+
+{% block body %}
+<h2>Enskripsyon</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleFirstname1">First name</label>
+      <input type="text" class="form-control" id="exampleInputFirstname1" aria-describedby="FirstnameHelp" name="first_name" required='required'>
+    </div>
+    <div class="form-group">
+      <label for="exampleLastname1">Last name</label>
+      <input type="text" class="form-control" id="exampleLastname1" name="last_name" required='required'>
+    </div>
+    <div class="form-group">
+      <label for="exampleUsername1">Username</label>
+      <input type="text" class="form-control" id="exampleUsername1" name="username" required='required'>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Modpass</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="modpass" required='required'>
+    </div>
+    <button type="submit" class="btn btn-primary">Enskri</button>  
+</form>
+{% endblock body %}

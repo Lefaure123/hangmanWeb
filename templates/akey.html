@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href=""https://fonts.googleapis.com/css?family=Tangerine"">
+{% block head %}
+    <title>Hangman Game!</title>
+      <style>
+        .bg-light {
+          background-color: #2980b9 !important;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+          color: #ecf0f1;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover, .nav-link:focus {
+          color: white;
+          border-bottom: 2px solid white;
+          padding-bottom: 5px;
+        }
+
+        .blocktext{
+          text-align: center;
+          font-family: 'Tangerine', serif;
+          font-style: italic;
+          font-size: 22px;
+          width: 400px;
+          height: 400px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+        .pyepaj{
+          text-align: center;
+          background-color: #2980b9 !important;
+          position:absolute;
+          bottom: 0;
+          width: 100%;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .3);        
+        }
+      </style>
+  </head> 
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"><h5><strong>Hangman</strong></h5></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item" >
+                <a class="nav-link" href="{% url 'enskri' %}">Enskripsyon</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link" href="{% url 'konekte' %}">koneksyon</a>
+          </li>
+          </ul>
+        </div>
+      </nav>
+{% endblock head %}
+
+{% block body %}
+      <div class="blocktext">
+        <h1><strong>"HANGMAN"</strong></h1>
+        <p>
+          Pou ou ki potko konnenl.<br>
+          Ou pral dekouvri yon jwet ki rele Hangman,<br>
+          Hangman se yon jwet kote wap devine mo a pati de yon endis yo baw.<br>
+          Yap baw yon deskripsyon epiw wap di ki mo ki koresponn ak deskripsyon an.<br>
+          Li tre fasil, ou pral dekouvri sa.<br> 
+        </p>
+      </div
+  </body>
+{% endblock body %}
+
+
+{% block footer %}
+  <footer class="pyepaj">
+    @Lenoe, Copyright reserved !! <br>
+    2022-2023 <br>
+    +509 3922-5954 <br>
+    lefaurenorl98@gmail.com <br>
+
+  </footer>
+  {% endblock footer %}
+</html>
